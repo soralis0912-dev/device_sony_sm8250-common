@@ -74,6 +74,12 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.dtv.rc",
+    src: "etc/init.dtv.rc",
+    sub_dir: "init",
+}
+
+prebuilt_etc {
     name: "init.sony.rc",
     src: "etc/init.sony.rc",
     sub_dir: "init",

@@ -442,6 +442,7 @@ $(call soong_config_set,libinit,vendor_init_lib,$(SONY_VENDOR_INIT_LIB))
 
 # DTV
 PRODUCT_PACKAGES += \
+    init.dtv.rc \
     libdtv_shim
 
 PRODUCT_BUILD_SUPER_PARTITION := false

@@ -1,0 +1,24 @@
+#
+# Copyright (C) 2026 The WitAqua Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Only the Japanese models carry the Socionext MN8855x ISDB-T tuner.
+# Stock keys this off ro.odm.build.SomcCntrl.device, which we do not set
+# because odm is built from source, so use the LTALabel model instead.
+
+service dtvserver /system/bin/dtvserver
+    class main
+    group sdcard_rw sdcard_r media_rw
+    disabled
+
+on post-fs-data && property:ro.vendor.ltalabel.model=SO-51A
+    mkdir /data/dtv 0700 system system
+    restorecon_recursive /data/dtv
+    start dtvserver
+
+on post-fs-data && property:ro.vendor.ltalabel.model=SOG01
+    mkdir /data/dtv 0700 system system
+    restorecon_recursive /data/dtv
+    start dtvserver
