@@ -168,6 +168,16 @@
         <fqname>@3.0::IRTPService/imsrtpservice</fqname>
     </hal>
     <hal format="hidl">
+      <name>vendor.semc.hardware.digitaltv.fullseg</name>
+      <transport>hwbinder</transport>
+      <fqname>@1.0::IFullseg/default</fqname>
+    </hal>
+    <hal format="hidl">
+      <name>vendor.semc.hardware.isdbttuner</name>
+      <transport>hwbinder</transport>
+      <fqname>@1.0::IIsdbttuner/default</fqname>
+    </hal>
+    <hal format="hidl">
       <name>vendor.semc.hardware.secd</name>
       <transport>hwbinder</transport>
       <fqname>@1.1::IDeviceSecurity/default</fqname>
