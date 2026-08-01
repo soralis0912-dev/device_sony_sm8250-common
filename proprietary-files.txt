@@ -1761,3 +1761,5 @@ vendor/firmware/tzfullseg.b04
 vendor/firmware/tzfullseg.b05
 vendor/firmware/tzfullseg.b06
 vendor/firmware/tzfullseg.b07
+vendor/etc/multimedia/aFkWdLvCgEvSoFxAqD
+vendor/etc/multimedia/pHbVeiEqOjnxLqiaLn
