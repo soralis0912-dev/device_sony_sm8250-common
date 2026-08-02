@@ -63,6 +63,8 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.ims.rcsconfig@1.0',
         'vendor.qti.ims.rcsconfig@1.1',
         'vendor.qti.imsrtpservice@3.0',
+        'vendor.semc.hardware.digitaltv.fullseg@1.0',
+        'vendor.semc.hardware.isdbttuner@1.0',
     ): lib_fixup_vendor_suffix,
 }
 

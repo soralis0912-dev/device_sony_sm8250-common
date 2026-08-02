@@ -1698,8 +1698,8 @@ system/lib64/vendor.semc.hardware.isdbttuner@1.0.so
 system/lib64/vendor.semc.hardware.digitaltv.fullseg@1.0.so
 system_ext/lib64/libdevice_security_client.so
 vendor/lib64/libisdbttuner.so
-vendor/lib64/vendor.semc.hardware.isdbttuner@1.0.so
-vendor/lib64/vendor.semc.hardware.digitaltv.fullseg@1.0.so
+vendor/lib64/vendor.semc.hardware.isdbttuner@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.semc.hardware.digitaltv.fullseg@1.0.so;MODULE_SUFFIX=_vendor
 
 system/lib/libisdbttunerclient.so
 system/lib/libfullseg_client.so
