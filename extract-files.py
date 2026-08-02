@@ -136,7 +136,6 @@ blob_fixups: blob_fixups_user_type = {
         'system/lib64/libDtvULayer.so',
     ): blob_fixup()
         .add_needed('libaudioclient_shim.so')
-        .add_needed('libpiex_shim.so')
         .add_needed('libui_shim.so')
         .add_needed('libgui_shim.so')
         .add_needed('libdtv_shim.so'),
