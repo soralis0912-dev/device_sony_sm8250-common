@@ -1661,7 +1661,7 @@ system_ext/etc/permissions/privapp-permissions-system-ext.xml
 product/priv-app/ExtMonitorApp/ExtMonitorApp.apk:product/app/ExtMonitorApp/ExtMonitorApp.apk;PRESIGNED
 
 # dtv
-system/priv-app/FsDtvApp/FsDtvApp.apk;PRESIGNED
+system/priv-app/FsDtvApp/FsDtvApp.apk
 system/etc/permissions/privapp-permissions-jp.co.fsi.fs1seg.xml
 vendor/etc/init/vendor.semc.hardware.isdbttuner@1.0-service.rc
 vendor/etc/init/vendor.semc.hardware.digitaltv.fullseg@1.0-service.rc
