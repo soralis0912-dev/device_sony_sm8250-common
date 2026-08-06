@@ -1,0 +1,7 @@
+on boot
+    # The mm_tuner driver creates power_ctrl after registering the device, so
+    # ueventd's sysfs rule races with it and the tuner HAL, which runs as
+    # system, cannot open it. Stock sets the permissions here for the same
+    # reason.
+    chown system system /sys/devices/mmtuner_pdev/power_ctrl
+    chmod 0660 /sys/devices/mmtuner_pdev/power_ctrl

@@ -5,11 +5,20 @@
 
 cc_library_shared {
     name: "libdtv_shim",
+    // libDtvULayer.so, the only consumer, is 64 bit only, and the AudioTrack
+    // stand-in reproduces a 64 bit object layout.
+    compile_multilib: "64",
     srcs: [
+        "AudioTrack.cpp",
         "SurfaceComposerClient.cpp",
         "piex.cpp",
     ],
+    header_libs: [
+        // AudioTrack.h pulls in media/Modulo.h, which libaudioclient does not export
+        "libmedia_headers",
+    ],
     shared_libs: [
+        "libaudioclient",
         "libgui",
         "libpiex",
         "libui",

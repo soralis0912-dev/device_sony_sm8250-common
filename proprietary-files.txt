@@ -1241,14 +1241,14 @@ vendor/lib/libdevice_security_vendor.so
 vendor/lib/libmiscta.so
 vendor/lib/libsuntory.so
 vendor/lib/vendor.qti.hardware.soter@1.0.so
-vendor/lib/vendor.somc.hardware.security.secd@1.1.so
+vendor/lib/vendor.somc.hardware.security.secd@1.1.so;MODULE_SUFFIX=_vendor
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/libdevice_security_vendor.so
 vendor/lib64/libmiscta.so
 vendor/lib64/libsuntory.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 vendor/lib64/vendor.somc.hardware.miscta@1.0.so
-vendor/lib64/vendor.somc.hardware.security.secd@1.1.so
+vendor/lib64/vendor.somc.hardware.security.secd@1.1.so;MODULE_SUFFIX=_vendor
 
 # SECD firmware
 vendor/firmware/tzsuntory.b00
@@ -1686,7 +1686,7 @@ system/lib64/libdtvsdserver_jni.so
 system/lib64/libDtvSecureMem.so
 system/lib64/libDtvService.so
 system/lib64/libDtvTRMP.so
-system/lib64/libDtvULayer.so
+system/lib64/libDtvULayer.so;DISABLE_CHECKELF
 system/lib64/libDtv.so
 system/lib64/libDtv_jni.so
 system/lib64/libDtvAppConfig.so
@@ -1697,6 +1697,7 @@ system/lib64/libsdvmrecplay.so
 system/lib64/vendor.semc.hardware.isdbttuner@1.0.so
 system/lib64/vendor.semc.hardware.digitaltv.fullseg@1.0.so
 system_ext/lib64/libdevice_security_client.so
+system_ext/lib64/vendor.somc.hardware.security.secd@1.1.so
 vendor/lib64/libisdbttuner.so
 vendor/lib64/vendor.semc.hardware.isdbttuner@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.semc.hardware.digitaltv.fullseg@1.0.so;MODULE_SUFFIX=_vendor
@@ -1706,6 +1707,18 @@ system/lib/libfullseg_client.so
 system/lib/vendor.semc.hardware.isdbttuner@1.0.so
 system/lib/vendor.semc.hardware.digitaltv.fullseg@1.0.so
 vendor/lib/libisdbttuner.so
+
+# Tuner firmware and register settings. Without these
+# tuner_ini_tnctl_loadrom_start() fails and the chip never leaves reset.
+vendor/etc/MN88553_CHTBL_FILE
+vendor/etc/MN88553_OFDM_RGS_FILE
+vendor/etc/MN88553_PSEQ1_HEX_FILE
+vendor/etc/MN88553_RFMT_RGS_FILE
+vendor/etc/MN88553_SOC_RGS_FILE
+vendor/etc/MN88553_TNCTL_HEX_FILE
+
+# The BML browser renders with this font
+system/fonts/HGAEJHR4_LINUX.TTF
 
 system/media/dtv/bml/graphic/acquire01
 system/media/dtv/bml/graphic/acquire02

@@ -26,8 +26,21 @@ namespace android {
  * Declare the class here instead of including <gui/SurfaceComposerClient.h>,
  * so that the old overload can be named. A member function mangles the same
  * way whether the enclosing scope is a class or a namespace.
+ *
+ * The blob also default-constructs one of these, so the class needs a real
+ * definition and not just a name. Deriving from the current one keeps the
+ * layout identical -- Parcelable's vptr plus mMap, nothing added here -- and
+ * leaves every virtual pointing at the current implementation.
  */
-struct LayerMetadata : gui::LayerMetadata {};
+struct LayerMetadata : gui::LayerMetadata {
+    LayerMetadata();
+    // Defined out of line so that it is the key function and the vtable gets
+    // emitted here rather than nowhere.
+    ~LayerMetadata() override;
+};
+
+LayerMetadata::LayerMetadata() = default;
+LayerMetadata::~LayerMetadata() = default;
 
 class SurfaceComposerClient {
   public:
