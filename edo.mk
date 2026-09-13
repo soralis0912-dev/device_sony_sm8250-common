@@ -374,6 +374,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Sony device library
 PRODUCT_PACKAGES += \
+    com.sony.device \
     com.sony.idd_dummy
 
 # Telephony
