@@ -10,6 +10,11 @@
 # service stays down until one of the models below is detected, which keeps
 # OMAPI from publishing an eSE1 reader that can never answer.
 #
+# The NFC configuration goes with it: stock routes card emulation to the UICC,
+# and libnfc-nxp-typef.conf points the offhost, system code and NFC-F routes
+# at the element (0xC0) instead. Without it nothing answers a reader, so the
+# two belong to the same set of models and are set together.
+#
 # ro.vendor.ltalabel.model comes from the LTALabel partition (see libinit and
 # init.qcom.msim.sh); stock keys this off ro.odm.build.SomcCntrl.device, which
 # we do not set because odm is built from source. The first three models are
@@ -17,21 +22,28 @@
 
 on post-fs-data && property:ro.vendor.ltalabel.model=SO-51A
     start vendor.secure_element_hal_service_1_2
+    setprop persist.vendor.nfc.config_file_name "libnfc-nxp-typef.conf"
 
 on post-fs-data && property:ro.vendor.ltalabel.model=SOG01
     start vendor.secure_element_hal_service_1_2
+    setprop persist.vendor.nfc.config_file_name "libnfc-nxp-typef.conf"
 
 on post-fs-data && property:ro.vendor.ltalabel.model=XQ-AT42
     start vendor.secure_element_hal_service_1_2
+    setprop persist.vendor.nfc.config_file_name "libnfc-nxp-typef.conf"
 
 on post-fs-data && property:ro.vendor.ltalabel.model=SO-52A
     start vendor.secure_element_hal_service_1_2
+    setprop persist.vendor.nfc.config_file_name "libnfc-nxp-typef.conf"
 
 on post-fs-data && property:ro.vendor.ltalabel.model=SOG02
     start vendor.secure_element_hal_service_1_2
+    setprop persist.vendor.nfc.config_file_name "libnfc-nxp-typef.conf"
 
 on post-fs-data && property:ro.vendor.ltalabel.model=A002SO
     start vendor.secure_element_hal_service_1_2
+    setprop persist.vendor.nfc.config_file_name "libnfc-nxp-typef.conf"
 
 on post-fs-data && property:ro.vendor.ltalabel.model=XQ-AS42
     start vendor.secure_element_hal_service_1_2
+    setprop persist.vendor.nfc.config_file_name "libnfc-nxp-typef.conf"
