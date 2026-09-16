@@ -1,0 +1,1 @@
+genfscon sysfs /class/usbpd                                          u:object_r:vendor_sysfs_usbpd_device:s0
