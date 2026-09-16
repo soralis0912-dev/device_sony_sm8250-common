@@ -141,7 +141,7 @@ ro.vendor.bt.bdaddr_path=/data/vendor/etc/bluetooth_bdaddr
 vendor.camera.enable.uvc=true
 
 # Chipset
-ro.soc.manufacturer=QTI
+ro.soc.manufacturer=Qualcomm
 ro.soc.model=SM8250
 
 # Crypto
